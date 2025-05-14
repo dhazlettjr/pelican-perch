@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pelican Perch</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
   <header>
@@ -15,7 +16,6 @@
   <section class="gallery">
     <h2>Gallery</h2>
     <div class="images">
-      <!-- Add condo photos in the /images folder and reference them here -->
       <img src="images/photo1.jpg" alt="Condo view" />
       <img src="images/photo2.jpg" alt="Living area" />
     </div>
@@ -30,27 +30,27 @@
     </ul>
   </section>
 
-<section class="booking">
-  <h2>Book Your Stay</h2>
-  <p>Select your dates:</p>
-  <input type="text" id="datePicker" placeholder="Select your dates" readonly>
+  <section class="booking">
+    <h2>Book Your Stay</h2>
+    <p>Select your dates below:</p>
+    <div id="datePicker"></div>
 
-  <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
-    <input type="hidden" name="item_name" value="Pelican Perch Booking">
-    <input type="hidden" name="currency_code" value="USD">
-    <input type="hidden" id="paypalAmount" name="amount" value="190">
-    <input type="hidden" id="paypalNights" name="quantity" value="1">
-    <button type="submit">Pay with PayPal</button>
-  </form>
-</section>
+    <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick" />
+      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL" />
+      <input type="hidden" name="item_name" value="Pelican Perch Booking" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <input type="hidden" id="paypalAmount" name="amount" value="190" />
+      <input type="hidden" id="paypalNights" name="quantity" value="1" />
+      <button type="submit">Pay with PayPal</button>
+    </form>
+  </section>
 
   <footer>
     <p>Contact us at <a href="mailto:dhazlettjr@example.com">dhazlettjr@example.com</a></p>
   </footer>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="script.js"></script>
 </body>
 </html>
