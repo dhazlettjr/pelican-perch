@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pelican Perch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Pelican Perch!</h1>
+    <p>Orange Beach, Alabama – Your beachfront escape</p>
+  </header>
+
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <div class="images">
+      <!-- Add condo photos in the /images folder and reference them here -->
+      <img src="images/photo1.jpg" alt="Condo view" />
+      <img src="images/photo2.jpg" alt="Living area" />
+    </div>
+  </section>
+
+  <section class="info">
+    <h2>Booking Information</h2>
+    <ul>
+      <li><strong>Rate:</strong> $190 per night</li>
+      <li><strong>Minimum Stay:</strong> 2 nights</li>
+      <li><strong>Location:</strong> Orange Beach, Alabama</li>
+    </ul>
+  </section>
+
+  <section class="booking">
+    <h2>Book Your Stay</h2>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick" />
+      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL" />
+      <input type="hidden" name="item_name" value="Pelican Perch Booking" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <label for="nights">Number of Nights (2 minimum):</label>
+      <input type="number" id="nights" name="quantity" min="2" value="2" required />
+      <input type="hidden" name="amount" value="190" />
+      <button type="submit">Pay with PayPal</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Contact us at <a href="mailto:dhazlettjr@example.com">dhazlettjr@example.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
