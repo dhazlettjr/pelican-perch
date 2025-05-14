@@ -1,12 +1,12 @@
-// Optional: Add client-side behavior here
-console.log("Pelican Perch website loaded.");
 const bookedRanges = [
   { from: "2025-05-14", to: "2025-05-16" },
   { from: "2025-05-20", to: "2025-05-22" },
-  // Add more date blocks here
+  { from: "2025-05-25", to: "2025-05-27" },
+  { from: "2025-06-01", to: "2025-06-03" }
 ];
 
 flatpickr("#datePicker", {
+  inline: true,
   mode: "range",
   minDate: "today",
   disable: bookedRanges,
